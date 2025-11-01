@@ -587,7 +587,8 @@ nav {
     margin: 0 auto;
 }
 .halal-logo {
-    height: 100px; /* Ukuran yang sesuai */
+    /* DEFAULT (Desktop) */
+    height: 100px; 
     width: auto;
 }
 .halal-content p {
@@ -600,9 +601,16 @@ nav {
 /* Media Query untuk Mobile */
 @media (max-width: 600px) {
     .halal-content {
-        flex-direction: column;
+        /* Tetap atur ke column, ini bagus */
+        flex-direction: column; 
     }
     .halal-logo {
-        height: 30px;
+        /* Hapus baris ini: height: 30px; */
+        /* Atau ganti dengan ukuran yang lebih masuk akal untuk mobile, misal: */
+        height: 60px; /* Logo masih terlihat jelas, tapi tidak terlalu besar */
+    }
+    /* Pastikan paragraf tidak terlalu besar di mobile */
+    .halal-content p {
+        font-size: 0.9rem;
     }
 }
