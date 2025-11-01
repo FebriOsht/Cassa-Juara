@@ -570,3 +570,39 @@ nav {
         text-align: left;
     }
 }
+
+/* Styling untuk Halal Proof Strip */
+.halal-proof-strip {
+    background-color: var(--color-bg-light); /* Latar belakang cerah */
+    padding: 20px 5%;
+    text-align: center;
+    border-bottom: 1px solid var(--color-bg-alt);
+}
+.halal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.halal-logo {
+    height: 100px; /* Ukuran yang sesuai */
+    width: auto;
+}
+.halal-content p {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 600px) {
+    .halal-content {
+        flex-direction: column;
+    }
+    .halal-logo {
+        height: 30px;
+    }
+}
