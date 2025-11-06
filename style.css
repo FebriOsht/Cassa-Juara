@@ -548,53 +548,122 @@ nav {
     background-color: #f8f9fa;
 }
 
-.distributor-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.distributor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.distributor-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+.distributor-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.distributor-text {
-    flex: 1;
-}
-
-.distributor-text h3 {
-    color: #2c5530;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.distributor-text ul {
-    margin: 1.5rem 0;
-    padding-left: 1.5rem;
-}
-
-.distributor-text li {
-    margin-bottom: 0.8rem;
-    line-height: 1.6;
+.distributor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .distributor-image {
-    flex: 1;
-    border-radius: 10px;
+    height: 200px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .distributor-image img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.distributor-image:hover img {
-    transform: scale(1.05);
+.distributor-card:hover .distributor-image img {
+    transform: scale(1.1);
+}
+
+.distributor-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.distributor-info p {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+}
+
+.distributor-cta {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.distributor-cta h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.distributor-cta p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+/* Styling untuk Bagian Galeri */
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsif untuk bagian distributor */
+@media (max-width: 768px) {
+    .distributor-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .distributor-image {
+        height: 180px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .distributor-cta {
+        padding: 1.5rem;
+    }
+    
+    .distributor-cta h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* Styling untuk Bagian Galeri */
