@@ -811,3 +811,73 @@ nav {
         font-size: 0.9rem;
     }
 }
+
+/* Styling untuk Bagian Video Horizontal */
+.video-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper-horizontal {
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    background: #000;
+    position: relative;
+    aspect-ratio: 9/16; /* Rasio vertikal seperti HP */
+    height: 70vh; /* Tinggi 70% dari viewport */
+    max-height: 700px;
+}
+
+.video-wrapper-horizontal video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Untuk desktop - sedikit lebih lebar */
+@media (min-width: 768px) {
+    .video-wrapper-horizontal {
+        max-width: 400px;
+        height: 70vh;
+        max-height: 700px;
+    }
+}
+
+/* Untuk mobile - full height dengan batas maksimal */
+@media (max-width: 767px) {
+    .video-wrapper-horizontal {
+        max-width: 350px;
+        height: 75vh;
+        max-height: 600px;
+        margin: 1.5rem auto;
+    }
+    
+    .video-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Efek hover untuk desktop */
+@media (hover: hover) {
+    .video-wrapper-horizontal {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .video-wrapper-horizontal:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+}
