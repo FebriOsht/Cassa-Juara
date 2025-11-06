@@ -543,6 +543,134 @@ nav {
     }
 }
 
+/* Styling untuk Bagian Distributor */
+#distributor {
+    background-color: #f8f9fa;
+}
+
+.distributor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.distributor-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.distributor-text {
+    flex: 1;
+}
+
+.distributor-text h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.distributor-text ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.distributor-text li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.distributor-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.distributor-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.distributor-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Styling untuk Bagian Galeri */
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* Responsif untuk bagian baru */
+@media (max-width: 768px) {
+    .distributor-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .gallery-caption {
+        transform: translateY(0);
+        background: rgba(0,0,0,0.7);
+        position: relative;
+        padding: 1rem;
+    }
+}
+
 
 /* --- DESKTOP/TABLET STYLES (Min 768px) --- */
 @media (min-width: 768px) {
